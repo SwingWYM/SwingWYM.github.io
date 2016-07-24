@@ -42,7 +42,9 @@ function leftToIn(){
 	var searchObject = document.getElementById('mysearch');
 	var searchContent = searchObject.value;
 	for (var i = 0, len = temp.length; i < len; i++) {
-		data.unshift(temp[i]);
+		if (trim(temp[i])) {
+			data.unshift(temp[i]);
+		}
 	}
 	// console.log(data);
 	show(searchContent);
@@ -56,7 +58,9 @@ function rightToIn(){
 	var searchObject = document.getElementById('mysearch');
 	var searchContent = searchObject.value;
 	for (var i = 0, len = temp.length; i < len; i++) {
-		data.push(temp[i]);
+		if (trim(temp[i])) {
+			data.push(temp[i]);
+		}
 	}
 	// console.log(data);
 	show(searchContent);
